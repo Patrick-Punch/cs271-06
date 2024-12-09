@@ -11,6 +11,23 @@
 
 #define NUM_PREDEFINED_SYMBOLS 23
 #define MAX_SYMBOL_NAME_LENGTH 7 // Longest predefined symbol name is "SCREEN"
+#define OPCODE_TO_BINARY(opcode)   \
+    (opcode & 0x8000 ? '1' : '0'), \
+    (opcode & 0x4000 ? '1' : '0'), \
+    (opcode & 0x2000 ? '1' : '0'), \
+    (opcode & 0x1000 ? '1' : '0'), \
+    (opcode & 0x0800 ? '1' : '0'), \
+    (opcode & 0x0400 ? '1' : '0'), \
+    (opcode & 0x0200 ? '1' : '0'), \
+    (opcode & 0x0100 ? '1' : '0'), \
+    (opcode & 0x0080 ? '1' : '0'), \
+    (opcode & 0x0040 ? '1' : '0'), \
+    (opcode & 0x0020 ? '1' : '0'), \
+    (opcode & 0x0010 ? '1' : '0'), \
+    (opcode & 0x0008 ? '1' : '0'), \
+    (opcode & 0x0004 ? '1' : '0'), \
+    (opcode & 0x0002 ? '1' : '0'), \
+    (opcode & 0x0001 ? '1' : '0')
 
 typedef enum symbol_id
 {
